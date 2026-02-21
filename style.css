@@ -1,0 +1,19 @@
+body {
+    background-color: #fef9f4;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+
+    background: #fff;
+    filter: url(#noiseFilter);
+    
+    opacity:0.2;
+    mix-blend-mode: multiply;
+
+    z-index: 0;
+}

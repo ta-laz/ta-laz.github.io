@@ -12,28 +12,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style.css"/>
     <title>Teodora-Alexandra Lazar</title>
   </head>
 
-  <body class="h-full p-2 font-sans bg-linear-to-r text-rose-900 min-h-screen">
+  <body class="h-full p-2 font-sans text-indigo-900 min-h-screen">
+    <svg width="0" height="0" style="position:absolute">
+      <filter id="noiseFilter">
+        <feTurbulence 
+          type="fractalNoise" 
+          baseFrequency="0.8" 
+          numOctaves="3" 
+          stitchTiles="stitch"/>
+      </filter>
+    </svg>
+    
     <div
       id="container"
       class="flex flex-col w-full max-w-3xl mx-auto"
     >
       <div id="banner" class="flex flex-col min-h-fit rounded-l p-2">
         <div>
-          <div class="text-5xl p-2 tracking-widest text-center font-bold pb-5 text-rose-950">
+          <div class="text-5xl p-2 tracking-widest text-center font-bold pb-5 text-indigo-950 pt-6 pb-10">
             Teodora-Alexandra Lazar
           </div>
         </div>
 
-        <div class="border-2 border-rose-900/40 p-4 rounded-xl">
+        <div class="bg-indigo-900 px-6 py-5 shadow-sm">
             <div class="flex items-center justify-between">
-            <p class="text-md font-medium font-semibold text-rose-900">
-              London based Backend Developer (.NET / ASP.NET Core)
+            <p class="text-xl text-white font-medium tracking-wide">
+              Software Developer <span class="opacity-60">· London</span>
             </p>
 
-            <div class="flex gap-3 text-xl">
+            <div class="flex gap-3 text-xl text-white">
               <a
                 href="mailto:teodoraalexandra.lazar@gmail.com"
                 class="hover:text-stone-300"
@@ -58,18 +69,18 @@
             </div>
       </div>
 
-      <div id="colcontainer" class="flex flex-col md:flex-row gap-6 pt-2">
-        <div id="left" class="flex flex-col order-2 md:basis-2/3 md:order-1 border-2 border-rose-900/40 rounded-xl p-4 min-w-0">
-            <b class="text-rose-950">Employment</b>
-            <section id="experience" class="text-xs m-w-prose max-w-100">
-              <article class="mb-6">
-                <h3 class="font-bold text-base md:text-lg">Backend Developer
-                  <span class="text-rose-700 text-sm font-medium">· Current</span>
+      <div id="colcontainer" class="flex flex-col md:flex-row gap-6 mt-6">
+        <div id="left" class="flex flex-col order-2 md:basis-2/3 md:order-1 border-2 border-indigo-900/20 p-6 min-w-0">
+            <b class="text-indigo-950 text-xl pb-4">Employment</b>
+            <section id="experience" class="text-xs max-w-100">
+              <article class="mb-6 border-l-2 border-orange-700/40 pl-4">
+                <h3 class="font-bold text-base md:text-md">Backend Developer
+                  <span class="text-orange-700 text-sm font-medium">· Current</span>
                 </h3>
-                <p>
+                <p class="text-xs text-indigo-900/60 font-semibold">
                   Crown Prosecution Service · London, UK · Jul. 2025
                 </p>
-                <ul class="list-disc list-outside pl-5 mt-1">
+                <ul class="list-disc list-outside pl-5 mt-1 text-sm leading-relaxed text-indigo-950">
                   <li>
                     Designing and developing backend features in ASP.NET Core applications, implementing RESTful APIs and database-backed workflow using Entity Framework.
                   </li>
@@ -80,12 +91,12 @@
                 </ul>
               </article>
               
-              <article class="mb-4">
+              <article class="mb-4 border-l-2 border-indigo-900/15 pl-4 text-sm">
                 <h3 class="font-bold">
                   Instructor (Level 4 Data Analyst Apprenticeship Coach)
                 </h3>
-                <p>Multiverse · London, UK · Mar. 2024 – Jul. 2025</p>
-                <ul class="list-disc list-outside pl-5 mt-1">
+                <p class="text-xs text-indigo-900/60 font-semibold">Multiverse · London, UK · Mar. 2024 – Jul. 2025</p>
+                <ul class="list-disc list-outside pl-5 mt-1 leading-relaxed text-indigo-950">
                   <li>
                     Effectively taught 90 virtual sessions per cohort for 5
                     cohorts (310 apprentices) on the Data Analyst track.
@@ -101,12 +112,12 @@
                 </ul>
               </article>
 
-              <article class="mb-4">
+              <article class="mb-4 border-l-2 border-indigo-900/15 pl-4 text-sm">
                 <h3 class="font-bold">
                   Data Coach (Level 4 Data Analyst Apprenticeship Coach)
                 </h3>
-                <p>Multiverse · Jan. 2023 – Mar. 2024</p>
-                <ul class="list-disc list-outside pl-5 mt-1">
+                <p class="text-xs text-indigo-900/60 font-semibold">Multiverse · Jan. 2023 – Mar. 2024</p>
+                <ul class="list-disc list-outside pl-5 mt-1 leading-relaxed text-indigo-950">
                   <li>
                     Enabled graduation of two cohorts (72 apprentices: 80%
                     distinction, 20% merit).
@@ -122,12 +133,12 @@
                 </ul>
               </article>
 
-              <article class="mb-4">
+              <article class="mb-4 border-l-2 border-indigo-900/15 pl-4 text-sm">
                 <h3 class="font-bold">
                   Forest Nursery Educator, Eco-Lead, Lead Gardener
                 </h3>
-                <p>Little Forest Folk · London, UK · Mar. 2021 – Apr. 2022</p>
-                <ul class="list-disc list-outside pl-5 mt-1">
+                <p class="text-xs text-indigo-900/60 font-semibold">Little Forest Folk · London, UK · Mar. 2021 – Apr. 2022</p>
+                <ul class="list-disc list-outside pl-5 mt-1 leading-relaxed text-indigo-950">
                   <li>Led application and achievement of Eco-School status.</li>
                   <li>
                     Delivered Early Years Foundation Stage framework with
@@ -142,61 +153,60 @@
             </section>
         </div>
 
-        <div id="right" class="flex flex-col order-1 md:basis-1/3 min-w-0 md:order-2 border-2 border-rose-900/40 rounded-xl p-4">
-          <h2 class="font-bold text-rose-950">Skills
-            <h4 class="text-sm font-bold">Technical</h4>
-            <ul class="list-disc list-outside pl-5 mt-1 text-xs">
-              <li>C#, Python, Swift, Kotlin</li>
-              <li>REST APIs</li> 
-              <li>SQL & PostgreSQL</li>     
-              <li>Entity Framework Core</li>
-              <li>Test-Driven Development (NUnit, Moq)</li>
-              <li>Clean and onion architecture</li>
-              <li>Git</li>
-              <li>HTML & CSS</li>
-            </ul>
-            <h4 class="pt-2 text-sm font-bold">Languages</h4>
-            <ul class="list-disc list-outside pl-5 mt-1 text-xs">
-                    <li>English (fluent)</li>
-                    <li>Romanian (native)</li>
-                    <li>Arabic (intermediate)</li>
-                    <li>French (beginner)</li>
-                  </ul>
-                </h2>
-            <div class="text-base pt-4 font-normal">
-            <b class="text-rose-950">Education</b>
-            <section id="education" class="text-xs m-w-prose max-w-100">
+        <div id="right" class="flex flex-col order-1 md:basis-1/3 min-w-0 md:order-2 border-2 border-indigo-900/20 p-6">
+        <h2 class="font-bold text-indigo-950 text-xl pb-2">Skills</h2>
+          <h4 class="text-md font-bold">Technical</h4>
+          <ul class="list-disc list-outside pl-5 mt-1 text-sm md:text-xs text-indigo-950">
+            <li>C#, Python, Swift, Kotlin</li>
+            <li>REST APIs</li> 
+            <li>SQL & PostgreSQL</li>     
+            <li>Entity Framework Core</li>
+            <li>Test-Driven Development (NUnit, Moq)</li>
+            <li>Clean and onion architecture</li>
+            <li>Git</li>
+            <li>HTML & CSS</li>
+          </ul>
+          <h4 class="pt-2 text-md font-bold">Languages</h4>
+          <ul class="list-disc list-outside pl-5 mt-1 text-sm md:text-xs text-indigo-950">
+            <li>English (fluent)</li>
+            <li>Romanian (native)</li>
+            <li>Arabic (intermediate)</li>
+            <li>French (beginner)</li>
+          </ul>
+          <div class="text-base pt-4 font-normal">
+            <h2 class="font-bold text-indigo-950 text-xl pb-2">Education</h2>
+            <section id="education" class="text-sm md:text-xs m-w-pindigo max-w-100">
                 <article class="mb-4">
-                <h3 class="font-bold">
+                <h3 class="text-xs font-semibold text-indigo-950 leading-snug">
                   Level 4 Software Development Apprenticeship
                 </h3>
-                <p>Makers · Jul 2025</p>
+                <p class="text-xs text-indigo-900/60 mt-0.5 font-semibold">Makers · Jul 2025</p>
                 </article>
               <article class="mb-4">
-                <h3 class="font-bold">
+                <h3 class="text-xs font-semibold text-indigo-950 leading-snug">
                   MSc Educational Studies (cum laude), Philosophy of Education
                 </h3>
-                <p>KU Leuven · Sep. 2020</p>
+                <p class="text-xs  text-indigo-900/60 font-semibold">KU Leuven · Sep. 2020</p>
               </article>
 
               <article class="mb-4">
-                <h3 class="font-bold">MSc Child Development and Education</h3>
-                <p>University of Amsterdam · Aug. 2017</p>
+                <h3 class="text-xs font-semibold text-indigo-950 leading-snug">MSc Child Development and Education</h3>
+                <p class="text-xs  text-indigo-900/60 font-semibold">University of Amsterdam · Aug. 2017</p>
               </article>
 
               <article class="mb-4">
-                <h3 class="font-bold">BA Honours Liberal Arts and Sciences, Psychology</h3>
-                <p>
+                <h3 class="text-xs font-semibold text-indigo-950 leading-snug">BA Honours Liberal Arts and Sciences, Psychology</h3>
+                <p class="text-xs text-indigo-900/60 font-semibold">
                   Maastricht University – University College Maastricht · Jul.
                   2016
                 </p>
               </article>
 
               <article class="mb-4">
-                <h3 class="font-bold">
+                <h3 class="text-xs font-semibold text-indigo-950 leading-snug">
                   Scholarship Programme: Psychology and Philosophy of Mind
                 </h3>
-                <p>University of Sydney · Fall 2015</p>
+                <p class="text-xs text-indigo-900/60 font-semibold">University of Sydney · Fall 2015</p>
               </article>
             </section>
           </div>
