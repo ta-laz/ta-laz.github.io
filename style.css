@@ -1,9 +1,9 @@
-body {
+html, body {
     background-color: #fef9f4;
     position: relative;
 }
 
-body::before {
+html::before {
     content: "";
     position: fixed;
     inset: 0;
